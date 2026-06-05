@@ -118,9 +118,17 @@ const OverviewTab = ({ data = {} }) => {
           border: '1px solid #000000'
         }}>
           {/* Y labels */}
-          <div style={{ position: 'absolute', left: '8px', top: '16px', fontSize: '10px', color: '#666' }}>200</div>
-          <div style={{ position: 'absolute', left: '8px', top: 'calc(50% - 6px)', fontSize: '10px', color: '#666' }}>100</div>
-          <div style={{ position: 'absolute', left: '8px', bottom: '16px', fontSize: '10px', color: '#666' }}>0</div>
+          <div style={{ position: 'absolute', left: '8px', top: '16px', fontSize: '10px', color: '#666' }}>
+            {data.startPoint ?? 200}
+          </div>
+
+          <div style={{ position: 'absolute', left: '8px', top: 'calc(50% - 6px)', fontSize: '10px', color: '#666' }}>
+            {data.midPoint ?? 100}
+          </div>
+
+          <div style={{ position: 'absolute', left: '8px', bottom: '16px', fontSize: '10px', color: '#666' }}>
+            {data.endPoint ?? 0}
+          </div>
 
           {/* SVG GRAPH */}
           <div style={{ position: 'relative', width: '100%', height: '100%' }}>

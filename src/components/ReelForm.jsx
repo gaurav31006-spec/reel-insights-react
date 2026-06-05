@@ -16,8 +16,8 @@ const InputField = ({ label, icon: Icon, name, value, onChange, type = 'text', p
       padding: '14px 16px',
       transition: 'border-color 0.2s'
     }}
-    onFocus={(e) => e.currentTarget.style.borderColor = '#0095f6'}
-    onBlur={(e) => e.currentTarget.style.borderColor = '#333'}
+      onFocus={(e) => e.currentTarget.style.borderColor = '#0095f6'}
+      onBlur={(e) => e.currentTarget.style.borderColor = '#333'}
     >
       {Icon && <Icon size={18} color="#a8a8a8" />}
       <input
@@ -82,6 +82,12 @@ const ReelForm = ({ onSubmit }) => {
     country3Name: '', country3Pct: '',
     country4Name: '', country4Pct: '',
     country5Name: '', country5Pct: '',
+    graphTop: '',
+    graphMid: '',
+    graphBottom: '',
+    startPoint: '',
+    midPoint: '',
+    endPoint: ''
   });
 
   const [preview, setPreview] = useState('');
@@ -94,43 +100,47 @@ const ReelForm = ({ onSubmit }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const followerP    = parseFloat(form.followerPct)    || 0;
+    const followerP = parseFloat(form.followerPct) || 0;
     const nonFollowerP = parseFloat(form.nonFollowerPct) || (100 - followerP);
-    const menP         = parseFloat(form.menPct)         || 70.4;
-    const womenP       = parseFloat(form.womenPct)       || 29.6;
+    const menP = parseFloat(form.menPct) || 70.4;
+    const womenP = parseFloat(form.womenPct) || 29.6;
 
     // Build country array from filled entries
-    const countries = [1,2,3,4,5]
+    const countries = [1, 2, 3, 4, 5]
       .map(i => ({
         label: form[`country${i}Name`],
-        pct:   parseFloat(form[`country${i}Pct`]) || 0,
+        pct: parseFloat(form[`country${i}Pct`]) || 0,
       }))
       .filter(c => c.label && c.pct > 0)
       .map(c => ({ ...c, value: c.pct.toFixed(1) + '%' }));
 
     onSubmit({
       ...form,
-      views:          form.views          || '0',
-      accountsReached:form.accountsReached|| '0',
-      avgWatchTime:   form.avgWatchTime   || '0s',
-      follows:        form.follows        || '0',
-      likes:          form.likes          || '0',
-      comments:       form.comments       || '0',
-      reposts:        form.reposts        || '0',
-      shares:         form.shares         || '0',
-      saves:          form.saves          || '0',
-      profileVisits:  form.profileVisits  || '0',
-      skipRate:    form.skipRate    ? form.skipRate    + '%' : '0.0%',
-      shareRate:   form.shareRate   ? form.shareRate   + '%' : '0.0%',
-      likeRate:    form.likeRate    ? form.likeRate    + '%' : '0.0%',
-      saveRate:    form.saveRate    ? form.saveRate    + '%' : '0.0%',
-      repostRate:  form.repostRate  ? form.repostRate  + '%' : '0.0%',
+      views: form.views || '0',
+      accountsReached: form.accountsReached || '0',
+      avgWatchTime: form.avgWatchTime || '0s',
+      follows: form.follows || '0',
+      likes: form.likes || '0',
+      comments: form.comments || '0',
+      reposts: form.reposts || '0',
+      shares: form.shares || '0',
+      saves: form.saves || '0',
+      profileVisits: form.profileVisits || '0',
+      skipRate: form.skipRate ? form.skipRate + '%' : '0.0%',
+      shareRate: form.shareRate ? form.shareRate + '%' : '0.0%',
+      likeRate: form.likeRate ? form.likeRate + '%' : '0.0%',
+      saveRate: form.saveRate ? form.saveRate + '%' : '0.0%',
+      repostRate: form.repostRate ? form.repostRate + '%' : '0.0%',
       commentRate: form.commentRate ? form.commentRate + '%' : '0.0%',
-      followerPct:    followerP,
+      followerPct: followerP,
       nonFollowerPct: nonFollowerP,
-      menPct:         menP,
-      womenPct:       womenP,
-      countries:      countries.length ? countries : null,
+      menPct: menP,
+      womenPct: womenP,
+      countries: countries.length ? countries : null,
+      startPoint: form.startPoint || '0',
+      midPoint: form.midPoint || '0',
+      endPoint: form.endPoint || '0'
+
     });
   };
 
@@ -156,7 +166,7 @@ const ReelForm = ({ onSubmit }) => {
         {/* Thumbnail */}
         <SectionTitle>Reel Thumbnail</SectionTitle>
         <InputField label="Image URL" icon={Image} name="imageUrl" value={form.imageUrl} onChange={handleChange} placeholder="https://your-image-url.com/photo.jpg" />
-        
+
         {preview && (
           <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '8px' }}>
             <div style={{ width: '120px', height: '200px', borderRadius: '8px', overflow: 'hidden', border: '2px solid #833ab4' }}>
@@ -212,10 +222,10 @@ const ReelForm = ({ onSubmit }) => {
 
         {/* Countries */}
         <SectionTitle>Top Countries</SectionTitle>
-        {[1,2,3,4,5].map(i => (
+        {[1, 2, 3, 4, 5].map(i => (
           <div key={i} style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '12px' }}>
-            <InputField label={`Country ${i}`} icon={UserPlus} name={`country${i}Name`} value={form[`country${i}Name`]} onChange={handleChange} placeholder={['India','Thailand','Brazil','Japan','Turkey'][i-1]} />
-            <InputField label="%" icon={TrendingUp} name={`country${i}Pct`} value={form[`country${i}Pct`]} onChange={handleChange} type="number" placeholder={['61.5','6.4','3.5','2.7','2.6'][i-1]} />
+            <InputField label={`Country ${i}`} icon={UserPlus} name={`country${i}Name`} value={form[`country${i}Name`]} onChange={handleChange} placeholder={['India', 'Thailand', 'Brazil', 'Japan', 'Turkey'][i - 1]} />
+            <InputField label="%" icon={TrendingUp} name={`country${i}Pct`} value={form[`country${i}Pct`]} onChange={handleChange} type="number" placeholder={['61.5', '6.4', '3.5', '2.7', '2.6'][i - 1]} />
           </div>
         ))}
 
@@ -242,7 +252,20 @@ const ReelForm = ({ onSubmit }) => {
           View Insights →
         </button>
       </form>
-    </div>
+
+      {/* Graph Control Points */}
+      <SectionTitle>Graph Control Points</SectionTitle>
+
+        <InputField label="Start Point" icon={TrendingUp} name="startPoint" value={form.startPoint} onChange={handleChange} />
+        <InputField label="Mid Point" icon={TrendingUp} name="midPoint" value={form.midPoint} onChange={handleChange} />
+        <InputField label="End Point" icon={TrendingUp} name="endPoint" value={form.endPoint} onChange={handleChange} />
+
+
+      </div>
+
+
+
+
   );
 };
 
