@@ -112,10 +112,10 @@ const OverviewTab = ({ data = {} }) => {
         <div style={{
           position: 'relative',
           height: '180px',
-          background: '#0a0a0a',
+          background: '#000000',
           borderRadius: '12px',
           padding: '16px 12px 16px 45px',
-          border: '1px solid #1a1a1a'
+          border: '1px solid #000000'
         }}>
           {/* Y labels */}
           <div style={{ position: 'absolute', left: '8px', top: '16px', fontSize: '10px', color: '#666' }}>200</div>
@@ -132,7 +132,7 @@ const OverviewTab = ({ data = {} }) => {
 
               {/* Typical reel - flat dashed gray */}
               <path
-                d="M 0 95 C 20 94, 50 92, 100 88"
+                d="M 0 98 C 20 70, 50 60, 100 40"
                 fill="none"
                 stroke="#666"
                 strokeWidth="1.5"
@@ -145,7 +145,7 @@ const OverviewTab = ({ data = {} }) => {
                 d="M 0 97 C 10 95, 20 88, 33 55 C 45 28, 60 18, 75 12 C 88 8, 95 6, 100 5"
                 fill="none"
                 stroke="#d946ef"
-                strokeWidth="6"
+                strokeWidth="3"
                 opacity="0.12"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -155,7 +155,7 @@ const OverviewTab = ({ data = {} }) => {
                 d="M 0 97 C 10 95, 20 88, 33 55 C 45 28, 60 18, 75 12 C 88 8, 95 6, 100 5"
                 fill="none"
                 stroke="#d946ef"
-                strokeWidth="2"
+                strokeWidth="1"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
@@ -245,7 +245,7 @@ const OverviewTab = ({ data = {} }) => {
                 <span style={{ color: '#fff', fontSize: '10px', fontWeight: 'bold' }}>IT'S</span>
               </div>
             )}
-            
+
             {/* Play Button Overlay */}
             <div style={{
               position: 'absolute',
@@ -284,24 +284,33 @@ const OverviewTab = ({ data = {} }) => {
               <line x1="0" y1="0" x2="100" y2="0" stroke="#222" strokeWidth="0.5" />
               <line x1="0" y1="50" x2="100" y2="50" stroke="#222" strokeWidth="0.5" />
               <line x1="0" y1="100" x2="100" y2="100" stroke="#222" strokeWidth="0.5" />
-              
+
               {/* Retention Curve Glow */}
+              {/* Retention Glow */}
               <path
-                d="M 0 0 L 25 0 C 27 0, 28 98, 32 98 L 100 98"
+                d="M 0 85 
+     C 10 80, 20 70, 30 65 
+     C 40 60, 50 50, 60 40 
+     C 70 30, 80 18, 90 10 
+     C 95 6, 98 4, 100 2"
                 fill="none"
                 stroke="#d946ef"
-                strokeWidth="5"
-                opacity="0.15"
+                strokeWidth="3"
+                opacity="0.12"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
-              
-              {/* Retention Curve Core Line */}
+
+              {/* Retention Core Line */}
               <path
-                d="M 0 0 L 25 0 C 27 0, 28 98, 32 98 L 100 98"
+                d="M 0 85 
+     C 10 80, 20 70, 30 65 
+     C 40 60, 50 50, 60 40 
+     C 70 30, 80 18, 90 10 
+     C 95 6, 98 4, 100 2"
                 fill="none"
                 stroke="#d946ef"
-                strokeWidth="2"
+                strokeWidth="1"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />

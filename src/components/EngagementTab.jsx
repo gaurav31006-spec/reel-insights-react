@@ -25,14 +25,14 @@ const EngagementTab = ({ data = {} }) => {
     >
 
       {/* Profile visits row */}
-       <div style={{ marginBottom: '40px' }}>
+      <div style={{ marginBottom: '40px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', margin: '24px 0 16px' }}>
           <h2 style={{ fontSize: '18px', fontWeight: '600' }}>Action after viewing</h2>
           <Info size={16} color="#888" />
         </div>
         <Row label="Profile visits" value={data.profileVisits || '0'} />
       </div>
-      
+
 
       {/* ================= INTERACTIONS ================= */}
       <div style={{ marginBottom: '40px' }}>
@@ -91,7 +91,7 @@ const EngagementTab = ({ data = {} }) => {
           background: '#000000',
           borderRadius: '12px',
           padding: '16px 12px 16px 45px',
-          border: '1px solid #1a1a1a'
+          border: '1px solid #000000'
         }}>
           {/* Y labels */}
           <div style={{ position: 'absolute', left: '8px', top: '16px', fontSize: '10px', color: '#666' }}>100%</div>
@@ -107,8 +107,11 @@ const EngagementTab = ({ data = {} }) => {
               <line x1="0" y1="100" x2="100" y2="100" stroke="#222" strokeWidth="0.5" />
 
               {/* Typical reel — flat dashed gray */}
+              {/* Typical line (dashed baseline) */}
               <path
-                d="M 0 92 L 20 88 L 40 80 L 60 78 L 80 70 L 100 68"
+                d="M 0 92 
+     C 20 90, 40 88, 60 86 
+     C 80 84, 90 82, 100 80"
                 fill="none"
                 stroke="#666"
                 strokeWidth="1"
@@ -116,8 +119,12 @@ const EngagementTab = ({ data = {} }) => {
                 strokeLinecap="round"
               />
 
+              {/* This reel - smooth upward growth curve */}
               <path
-                d="M 0 100 L 10 85 L 20 92 L 30 70 L 40 78 L 50 55 L 60 62 L 70 40 L 80 30 L 90 18 L 100 2"
+                d="M 0 100 
+     C 15 98, 25 85, 40 70 
+     C 55 55, 70 35, 85 18 
+     C 92 10, 96 6, 100 3"
                 fill="none"
                 stroke="#d946ef"
                 strokeWidth="1"
