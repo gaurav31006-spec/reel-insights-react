@@ -144,7 +144,7 @@ const OverviewTab = ({ data = {} }) => {
               <path
                 d="M 0 97 C 10 95, 20 88, 33 55 C 45 28, 60 18, 75 12 C 88 8, 95 6, 100 5"
                 fill="none"
-                stroke="#ff0069"
+                stroke="#d946ef"
                 strokeWidth="6"
                 opacity="0.12"
                 strokeLinecap="round"
@@ -154,7 +154,7 @@ const OverviewTab = ({ data = {} }) => {
               <path
                 d="M 0 97 C 10 95, 20 88, 33 55 C 45 28, 60 18, 75 12 C 88 8, 95 6, 100 5"
                 fill="none"
-                stroke="#ff0069"
+                stroke="#d946ef"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -289,7 +289,7 @@ const OverviewTab = ({ data = {} }) => {
               <path
                 d="M 0 0 L 25 0 C 27 0, 28 98, 32 98 L 100 98"
                 fill="none"
-                stroke="#ff0069"
+                stroke="#d946ef"
                 strokeWidth="5"
                 opacity="0.15"
                 strokeLinecap="round"
@@ -300,7 +300,7 @@ const OverviewTab = ({ data = {} }) => {
               <path
                 d="M 0 0 L 25 0 C 27 0, 28 98, 32 98 L 100 98"
                 fill="none"
-                stroke="#ff0069"
+                stroke="#d946ef"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
