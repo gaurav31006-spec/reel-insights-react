@@ -20,7 +20,7 @@ const BarRow = ({ label, value, pct }) => (
           initial={{ width: 0 }}
           animate={{ width: `${pct}%` }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
-          style={{ height: '100%', backgroundColor: '#ff0069', borderRadius: '99px' }}
+          style={{ height: '100%', backgroundColor: '#d946ef', borderRadius: '99px' }}
         />
       </div>
       <span style={{ fontSize: '14px', fontWeight: '700', color: '#fff', minWidth: '44px', textAlign: 'right' }}>
@@ -48,7 +48,7 @@ const DonutChart = ({ menPct, womenPct }) => {
       {/* men – pink */}
       <circle
         cx={cx} cy={cy} r={r}
-        fill="none" stroke="#ff0069" strokeWidth="10"
+        fill="none" stroke="#d946ef" strokeWidth="10"
         strokeDasharray={`${menDash - gap} ${circ - menDash + gap}`}
         strokeDashoffset={circ / 4}
         strokeLinecap="butt"
@@ -153,7 +153,7 @@ const AudienceTab = ({ data = {} }) => {
                 <div style={{ fontSize: '24px', fontWeight: '800' }}>{menPct}%</div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '5px', justifyContent: 'flex-end', marginTop: '4px' }}>
                   <span style={{ fontSize: '13px', color: '#aaa' }}>Men</span>
-                  <div style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#ff0069' }} />
+                  <div style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#d946ef' }} />
                 </div>
               </div>
 

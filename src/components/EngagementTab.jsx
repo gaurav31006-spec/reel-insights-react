@@ -25,7 +25,14 @@ const EngagementTab = ({ data = {} }) => {
     >
 
       {/* Profile visits row */}
-      <Row label="Profile visits" value={data.profileVisits || '0'} />
+       <div style={{ marginBottom: '40px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', margin: '24px 0 16px' }}>
+          <h2 style={{ fontSize: '18px', fontWeight: '600' }}>Action after viewing</h2>
+          <Info size={16} color="#888" />
+        </div>
+        <Row label="Profile visits" value={data.profileVisits || '0'} />
+      </div>
+      
 
       {/* ================= INTERACTIONS ================= */}
       <div style={{ marginBottom: '40px' }}>
@@ -81,7 +88,7 @@ const EngagementTab = ({ data = {} }) => {
         <div style={{
           position: 'relative',
           height: '180px',
-          background: '#0a0a0a',
+          background: '#000000',
           borderRadius: '12px',
           padding: '16px 12px 16px 45px',
           border: '1px solid #1a1a1a'
@@ -112,7 +119,7 @@ const EngagementTab = ({ data = {} }) => {
               <path
                 d="M 0 100 L 10 85 L 20 92 L 30 70 L 40 78 L 50 55 L 60 62 L 70 40 L 80 30 L 90 18 L 100 2"
                 fill="none"
-                stroke="#ff0069"
+                stroke="#d946ef"
                 strokeWidth="1"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -139,7 +146,7 @@ const EngagementTab = ({ data = {} }) => {
         {/* Legend */}
         <div style={{ display: 'flex', gap: '20px', marginTop: '14px', paddingLeft: '4px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-            <div style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#ff0069' }} />
+            <div style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#d946ef' }} />
             <span style={{ fontSize: '13px', color: '#aaa' }}>This reel</span>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
