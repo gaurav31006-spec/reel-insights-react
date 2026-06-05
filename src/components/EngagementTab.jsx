@@ -30,7 +30,7 @@ const EngagementTab = ({ data = {} }) => {
           <h2 style={{ fontSize: '18px', fontWeight: '600' }}>Action after viewing</h2>
           <Info size={16} color="#888" />
         </div>
-        <Row label="Profile visits" value={data.profileVisits || '0'} />
+        <Row label="Profile visits" value={data.profileVisits || '984'} />
       </div>
 
 
