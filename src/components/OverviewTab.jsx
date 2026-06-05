@@ -183,7 +183,7 @@ const OverviewTab = ({ data = {} }) => {
         {/* Legend */}
         <div style={{ display: 'flex', gap: '20px', marginTop: '14px', paddingLeft: '4px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-            <div style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#ff0069' }} />
+            <div style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#d946ef' }} />
             <span style={{ fontSize: '13px', color: '#aaa' }}>This reel</span>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
