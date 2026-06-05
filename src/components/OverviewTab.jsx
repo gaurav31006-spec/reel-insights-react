@@ -1,5 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
+import React, { useEffect, useState } from 'react';
 import {
   Info,
   Clock,
@@ -53,6 +53,20 @@ const ImpactRow = ({ icon: Icon, label, value }) => (
 );
 
 const OverviewTab = ({ data = {} }) => {
+  const [apiData, setApiData] = useState(null);
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+
+    fetch("http://localhost:5000/protected", {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
+      .then(res => res.json())
+      .then(data => setApiData(data))
+      .catch(err => console.log(err));
+  }, []);
 
   const followerPct = parseFloat(data.followerPct) || 30;
   const nonFollowerPct = parseFloat(data.nonFollowerPct) || 70;
@@ -183,9 +197,9 @@ const OverviewTab = ({ data = {} }) => {
           paddingLeft: '45px',
           paddingRight: '12px'
         }}>
-          <span>Jun 4</span>
-          <span>Jun 5</span>
-          <span>Jun 6</span>
+          <span>0h</span>
+          <span>6h</span>
+          <span>12h</span>
         </div>
 
         {/* Legend */}
