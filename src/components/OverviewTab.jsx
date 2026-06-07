@@ -153,8 +153,13 @@ const OverviewTab = ({ data = {} }) => {
               <line x1="0" y1="100" x2="100" y2="100" stroke="#222" strokeWidth="0.5" />
 
               {/* Typical reel - flat dashed gray */}
-             <path
-  d="M 0 98 C 15 92, 30 88, 50 78 C 70 60, 85 35, 100 20"
+           <path
+  d="M 0 98 
+     C 10 85, 20 70, 30 72 
+     C 38 75, 45 65, 52 55 
+     C 58 60, 63 40, 70 28 
+     C 76 35, 82 18, 88 12 
+     C 92 20, 96 8, 100 5"
   fill="none"
   stroke="#666"
   strokeWidth="1.5"
@@ -162,9 +167,14 @@ const OverviewTab = ({ data = {} }) => {
   strokeLinecap="round"
 />
 
-{/* This reel - glow */}
+{/* Glow */}
 <path
-  d="M 0 98 C 15 92, 30 88, 50 78 C 70 60, 85 35, 100 10"
+  d="M 0 98 
+     C 10 85, 20 70, 30 72 
+     C 38 75, 45 65, 52 55 
+     C 58 60, 63 40, 70 28 
+     C 76 35, 82 18, 88 12 
+     C 92 20, 96 8, 100 5"
   fill="none"
   stroke="#d946ef"
   strokeWidth="3"
@@ -173,16 +183,54 @@ const OverviewTab = ({ data = {} }) => {
   strokeLinejoin="round"
 />
 
-{/* This reel - core line */}
+{/* Core */}
 <path
-  d="M 0 98 C 15 92, 30 88, 50 78 C 70 60, 85 35, 100 10"
+  d="M 0 98 
+     C 10 85, 20 70, 30 72 
+     C 38 75, 45 65, 52 55 
+     C 58 60, 63 40, 70 28 
+     C 76 35, 82 18, 88 12 
+     C 92 20, 96 8, 100 5"
   fill="none"
   stroke="#d946ef"
   strokeWidth="1"
   strokeLinecap="round"
   strokeLinejoin="round"
+/><path
+  d="M 0 98 
+     C 30 90, 60 70, 80 40 
+     C 90 25, 100 10"
+  fill="none"
+  stroke="#666"
+  strokeWidth="1.5"
+  strokeDasharray="5 4"
+  strokeLinecap="round"
 />
-            </svg>
+
+{/* Glow */}
+<path
+  d="M 0 98 
+     C 30 90, 60 70, 80 40 
+     C 90 25, 100 10"
+  fill="none"
+  stroke="#d946ef"
+  strokeWidth="3"
+  opacity="0.12"
+  strokeLinecap="round"
+  strokeLinejoin="round"
+/>
+
+{/* Core */}
+<path
+  d="M 0 98 
+     C 30 90, 60 70, 80 40 
+     C 90 25, 100 10"
+  fill="none"
+  stroke="#d946ef"
+  strokeWidth="1"
+  strokeLinecap="round"
+  strokeLinejoin="round"
+/> </svg>
 
 
           </div>
@@ -310,13 +358,14 @@ const OverviewTab = ({ data = {} }) => {
 
               {/* Retention Curve Glow */}
               {/* Retention Glow */}
-             <path
+            <path
   d="M 0 85 
-     C 5 75, 10 65, 15 58 
-     C 25 50, 35 45, 45 42 
-     C 55 40, 65 38, 75 30 
-     C 85 20, 92 12, 96 8 
-     C 98 5, 100 3"
+     C 5 72, 10 60, 15 55 
+     C 22 48, 30 46, 38 44 
+     C 45 43, 52 46, 58 40 
+     C 65 32, 70 28, 76 26 
+     C 82 20, 88 12, 93 9 
+     C 96 6, 98 4, 100 3"
   fill="none"
   stroke="#d946ef"
   strokeWidth="3"
@@ -328,11 +377,12 @@ const OverviewTab = ({ data = {} }) => {
 {/* Core line */}
 <path
   d="M 0 85 
-     C 5 75, 10 65, 15 58 
-     C 25 50, 35 45, 45 42 
-     C 55 40, 65 38, 75 30 
-     C 85 20, 92 12, 96 8 
-     C 98 5, 100 3"
+     C 5 72, 10 60, 15 55 
+     C 22 48, 30 46, 38 44 
+     C 45 43, 52 46, 58 40 
+     C 65 32, 70 28, 76 26 
+     C 82 20, 88 12, 93 9 
+     C 96 6, 98 4, 100 3"
   fill="none"
   stroke="#d946ef"
   strokeWidth="1"

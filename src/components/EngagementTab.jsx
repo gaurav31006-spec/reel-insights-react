@@ -108,36 +108,38 @@ const EngagementTab = ({ data = {} }) => {
 
               {/* Typical reel — flat dashed gray */}
               {/* Typical line (dashed baseline) */}
-              <path
-                d="M 0 100 
-     C 10 98, 18 96, 25 92 
-     C 32 85, 38 75, 45 65 
-     C 52 60, 58 62, 63 55 
-     C 70 40, 76 25, 82 18 
-     C 88 12, 93 8, 96 5 
+            <path
+  d="M 0 100 
+     C 8 99, 15 97, 22 93 
+     C 28 88, 32 80, 38 72 
+     C 42 68, 48 70, 52 62 
+     C 58 50, 62 58, 66 45 
+     C 70 30, 76 22, 82 18 
+     C 88 14, 92 9, 96 5 
      C 98 3, 100 2"
-                fill="none"
-                stroke="#666"
-                strokeWidth="1"
-                strokeDasharray="5 4"
-                strokeLinecap="round"
-              />
+  fill="none"
+  stroke="#666"
+  strokeWidth="1"
+  strokeDasharray="5 4"
+  strokeLinecap="round"
+/>
 
-              {/* This reel - engagement growth curve */}
-              <path
-                d="M 0 100 
-     C 10 98, 18 96, 25 92 
-     C 32 85, 38 75, 45 65 
-     C 52 60, 58 62, 63 55 
-     C 70 40, 76 25, 82 18 
-     C 88 12, 93 8, 96 5 
+{/* This reel - engagement growth curve */}
+<path
+  d="M 0 100 
+     C 8 99, 15 97, 22 93 
+     C 28 88, 32 80, 38 72 
+     C 42 68, 48 70, 52 62 
+     C 58 50, 62 58, 66 45 
+     C 70 30, 76 22, 82 18 
+     C 88 14, 92 9, 96 5 
      C 98 3, 100 2"
-                fill="none"
-                stroke="#d946ef"
-                strokeWidth="1"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
+  fill="none"
+  stroke="#d946ef"
+  strokeWidth="1"
+  strokeLinecap="round"
+  strokeLinejoin="round"
+/>
             </svg>
           </div>
         </div>
