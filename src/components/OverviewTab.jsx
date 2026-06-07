@@ -153,34 +153,35 @@ const OverviewTab = ({ data = {} }) => {
               <line x1="0" y1="100" x2="100" y2="100" stroke="#222" strokeWidth="0.5" />
 
               {/* Typical reel - flat dashed gray */}
-              <path
-                d="M 0 98 C 20 70, 50 60, 100 40"
-                fill="none"
-                stroke="#666"
-                strokeWidth="1.5"
-                strokeDasharray="5 4"
-                strokeLinecap="round"
-              />
+             <path
+  d="M 0 98 C 15 92, 30 88, 50 78 C 70 60, 85 35, 100 20"
+  fill="none"
+  stroke="#666"
+  strokeWidth="1.5"
+  strokeDasharray="5 4"
+  strokeLinecap="round"
+/>
 
-              {/* This reel - glow */}
-              <path
-                d="M 0 97 C 10 95, 20 88, 33 55 C 45 28, 60 18, 75 12 C 88 8, 95 6, 100 5"
-                fill="none"
-                stroke="#d946ef"
-                strokeWidth="3"
-                opacity="0.12"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              {/* This reel - core line */}
-              <path
-                d="M 0 97 C 10 95, 20 88, 33 55 C 45 28, 60 18, 75 12 C 88 8, 95 6, 100 5"
-                fill="none"
-                stroke="#d946ef"
-                strokeWidth="1"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
+{/* This reel - glow */}
+<path
+  d="M 0 98 C 15 92, 30 88, 50 78 C 70 60, 85 35, 100 10"
+  fill="none"
+  stroke="#d946ef"
+  strokeWidth="3"
+  opacity="0.12"
+  strokeLinecap="round"
+  strokeLinejoin="round"
+/>
+
+{/* This reel - core line */}
+<path
+  d="M 0 98 C 15 92, 30 88, 50 78 C 70 60, 85 35, 100 10"
+  fill="none"
+  stroke="#d946ef"
+  strokeWidth="1"
+  strokeLinecap="round"
+  strokeLinejoin="round"
+/>
             </svg>
 
 
@@ -309,33 +310,35 @@ const OverviewTab = ({ data = {} }) => {
 
               {/* Retention Curve Glow */}
               {/* Retention Glow */}
-              <path
-                d="M 0 85 
-     C 10 80, 20 70, 30 65 
-     C 40 60, 50 50, 60 40 
-     C 70 30, 80 18, 90 10 
-     C 95 6, 98 4, 100 2"
-                fill="none"
-                stroke="#d946ef"
-                strokeWidth="3"
-                opacity="0.12"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
+             <path
+  d="M 0 85 
+     C 5 75, 10 65, 15 58 
+     C 25 50, 35 45, 45 42 
+     C 55 40, 65 38, 75 30 
+     C 85 20, 92 12, 96 8 
+     C 98 5, 100 3"
+  fill="none"
+  stroke="#d946ef"
+  strokeWidth="3"
+  opacity="0.12"
+  strokeLinecap="round"
+  strokeLinejoin="round"
+/>
 
-              {/* Retention Core Line */}
-              <path
-                d="M 0 85 
-     C 10 80, 20 70, 30 65 
-     C 40 60, 50 50, 60 40 
-     C 70 30, 80 18, 90 10 
-     C 95 6, 98 4, 100 2"
-                fill="none"
-                stroke="#d946ef"
-                strokeWidth="1"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
+{/* Core line */}
+<path
+  d="M 0 85 
+     C 5 75, 10 65, 15 58 
+     C 25 50, 35 45, 45 42 
+     C 55 40, 65 38, 75 30 
+     C 85 20, 92 12, 96 8 
+     C 98 5, 100 3"
+  fill="none"
+  stroke="#d946ef"
+  strokeWidth="1"
+  strokeLinecap="round"
+  strokeLinejoin="round"
+/>
             </svg>
           </div>
 

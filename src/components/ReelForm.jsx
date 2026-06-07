@@ -189,7 +189,7 @@ const ReelForm = ({ onSubmit }) => {
         {/* Overview */}
         <SectionTitle>Performance Summary</SectionTitle>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
-          <InputField label="Views" icon={Eye} name="views" value={form.views} onChange={handleChange} type="number" placeholder="10363" />
+          <InputField label="Views" icon={Eye} name="views" value={form.views} onChange={handleChange} type="string" placeholder="10363" />
           <InputField label="Accounts Reached" icon={UserPlus} name="accountsReached" value={form.accountsReached} onChange={handleChange} type="number" placeholder="64" />
           <InputField label="Avg Watch Time" icon={Clock} name="avgWatchTime" value={form.avgWatchTime} onChange={handleChange} placeholder="20.6s" />
           <InputField label="Follows" icon={UserPlus} name="follows" value={form.follows} onChange={handleChange} type="number" placeholder="0" />

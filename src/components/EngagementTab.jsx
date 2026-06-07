@@ -109,9 +109,13 @@ const EngagementTab = ({ data = {} }) => {
               {/* Typical reel — flat dashed gray */}
               {/* Typical line (dashed baseline) */}
               <path
-                d="M 0 92 
-     C 20 90, 40 88, 60 86 
-     C 80 84, 90 82, 100 80"
+                d="M 0 100 
+     C 10 98, 18 96, 25 92 
+     C 32 85, 38 75, 45 65 
+     C 52 60, 58 62, 63 55 
+     C 70 40, 76 25, 82 18 
+     C 88 12, 93 8, 96 5 
+     C 98 3, 100 2"
                 fill="none"
                 stroke="#666"
                 strokeWidth="1"
@@ -119,12 +123,15 @@ const EngagementTab = ({ data = {} }) => {
                 strokeLinecap="round"
               />
 
-              {/* This reel - smooth upward growth curve */}
+              {/* This reel - engagement growth curve */}
               <path
                 d="M 0 100 
-     C 15 98, 25 85, 40 70 
-     C 55 55, 70 35, 85 18 
-     C 92 10, 96 6, 100 3"
+     C 10 98, 18 96, 25 92 
+     C 32 85, 38 75, 45 65 
+     C 52 60, 58 62, 63 55 
+     C 70 40, 76 25, 82 18 
+     C 88 12, 93 8, 96 5 
+     C 98 3, 100 2"
                 fill="none"
                 stroke="#d946ef"
                 strokeWidth="1"
